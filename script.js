@@ -33,6 +33,12 @@ container.addEventListener('mouseover',(e)=>{
     let item = e.target;
    if(item.classList.contains('grid-square')){
     item.style.backgroundColor=getRandomColor();
+    const currentOpacity= parseFloat(window.getComputedStyle(item).opacity);
+    console.log(currentOpacity);
+    if(currentOpacity>0){
+        item.style.opacity=(currentOpacity-0.1).toFixed(1);
+        
+    }
    }
 
     
